@@ -1,0 +1,140 @@
+<nav class="tool-area">
+  <div>
+    <!-- <label id="file-name">file name:</label> -->
+    <button id="clear-button" (click)="clear()">
+      <img src="../assets/icons/clear_all.png" (click)="undo()">
+      <br>
+      <span>Clear All</span>
+    </button>
+    <div class="undo-redo">
+      <button class="undo">
+          <img src="../assets/icons/undo.svg" (click)="undo()">
+      </button>
+      <button class="redo">
+          <img src="../assets/icons/redo.svg" (click) = "redo()">
+      </button>
+    </div>
+    <br>
+    <input id="fileName" type="text" placeholder="Enrer name of file">
+    <button (click)="save()" title="save">
+        <img src="../assets/icons/get.png" width="25" height="25">
+        <br>
+        <span>Save</span>
+    </button>
+    <br>
+    <select name="canvasFiles" id="canvasFiles" >
+
+    </select>
+    <button (click)="getClicked()" title="get">
+        <img src="../assets/icons/download.png" width="20" height="20">
+        <span>Download</span>
+    </button>
+    <button (click)="deleteClicked()" title=" delete">
+        <img src="../assets/icons/trash.png" width="20" height="20">
+        <span>Delete</span>
+    </button>
+    <br>
+    <br>
+ </div>
+
+  <span class="sub-title">Shapes</span>
+
+  <div class="shapes">
+      <button class="_button" id = "circle" (click)="CapureDrawButton('circle')">
+          <img src="../assets/icons/circle.svg" >
+          <br>
+          <span>Circle</span>
+       </button>
+       <button class="_button" id = "rectangle" (click)="CapureDrawButton('rectangle')">
+          <img src="../assets/icons/rectangle.svg">
+          <br>
+          <span>rectangle</span>
+       </button>
+       <button class="_button" id = "triangle" (click)="CapureDrawButton('triangle')">
+          <img src="../assets/icons/triangle.svg">
+          <br>
+          <span>triangle</span>
+       </button>
+       <button class="_button" id = "line" (click)="CapureDrawButton('line')">
+          <img src="../assets/icons/line.svg">
+          <br>
+          <span>line</span>
+       </button>
+       <button class= "_button" id = "polygon" (click)="CapureDrawButton('polygon')">
+          <img src="../assets/icons/polygon.svg">
+          <br>
+          <span>polygon</span>
+       </button>
+       <button class= "_button" id = "eclipse" (click)="CapureDrawButton('eclipse')">
+        <img src="../assets/icons/polygon.svg">
+        <br>
+        <span>Eclipse</span>
+     </button>
+  </div>
+  <span class="sub-title">Tools</span>
+  <div class="tools">
+      <button class="_button" id = "move" (click)="move()">
+          <img src="../assets/icons/cursor-hand.svg">
+          <br>
+          <span>move</span>
+       </button>
+       <button class="_button" id = "resize" (click)="resize()">
+          <img src="../assets/icons/cursor-hand.svg">
+          <br>
+          <span>Resize</span>
+      </button>
+      <button class="_button" id = "copy" (click)="copy()">
+          <img src="../assets/icons/cursor-hand.svg">
+          <br>
+          <span>Copy</span>
+       </button>
+       <button class="_button" id = "delete" (click)="Delete()">
+        <img src="../assets/icons/cursor-hand.svg">
+        <br>
+        <span>Delete</span>
+     </button>
+       <!-- <button class="_button" id = "pen">
+          <img src="../assets/icons/pen.svg">
+          <br>
+          <span>Pen</span>
+       </button>
+      <button class="_button" id = "brush">
+          <img src="../assets/icons/brush.svg">
+          <br>
+          <span>Brush</span>
+       </button>
+       <button class="_button" id = "eraser">
+          <img src="../assets/icons/eraser.svg">
+          <br>
+          <span>Erase</span>
+       </button> -->
+  </div>
+  <span class="sub-title">Color</span>
+  <div class="color">
+      <input type="color" id ='strokeColor' value="#000000">
+  </div>
+  <span class="sub-title" >Size</span>
+  <div class="size">
+      <input type="range" id ='strokeSize' min="5" max="40" value="10">
+  </div>
+  <div class="fill-color">
+      <input type="checkbox" id = "fill" (click) = "fillClicked()" class="fillColor">
+      <label for="fill">Fill color</label>
+  </div>
+  <div class="color">
+    <input type="color" id="colorFill" value="#000000">
+</div>
+
+</nav>
+<div class="draw-area" id="draw-area">
+  <svg #svg (mousedown)="mouseDown($event)"
+
+  (mouseup)="mouseUp($event)"
+  (mousemove)="mouseMove($event)"
+  (click)="mouseClick($event)"
+
+  >
+
+  </svg>
+</div>
+

@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100vh;
+}
+nav{
+   background-color: rgb(243, 230, 230);
+   width: 20%;
+   min-height: 100vh;
+   border-radius: 7px;
+   padding: 10px;
+   margin-right: 0px;
+   float: left;
+}
+.draw-area{
+   float: right;
+   width: 78%;
+   min-height: 100vh;
+   margin-left: 0px;
+   background-color: rgb(243, 230, 230);
+   border-radius: 7px;
+}
+.undo-redo{
+    float: right;
+    padding-right: 4px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.sub-title{
+    font-size: 25px;
+    font-weight: bold;
+}
+.shapes{
+    margin-bottom: 10px;
+}
+.tools{
+    margin-bottom: 10px;
+}
+.color{
+    margin: 13px 0;
+}
+.size{
+    margin-bottom: 20px;
+}
+.fill-color{
+    font-size: 20px;
+}
+button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    background: none;
+  }
+
+button:hover{
+    appearance: auto;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: navajowhite;
+    border-image: initial;
+    color: blue;
+}
+.undo, .redo{
+    width: 25px;
+    height: 25px;
+}
+.undo:hover, .redo:hover{
+    appearance: auto;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    margin: 0em;
+    border: none;
+    background-color: inherit;
+    color: blue;
+}
+.undo-redo img:hover{
+    border-width: 1px;
+    border-style: outset;
+    border-color: navajowhite;
+
+}
+
+#_range{
+    width: 80%;
+    height: 5px;
+}
+
+.draw-area svg{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 230, 230);
+}
+
+.active{
+    color: blue;
+}
+._cursor{
+    cursor:nwse-resize;
+}
